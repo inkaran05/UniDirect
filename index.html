@@ -3,39 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>UniDirect - Find Your Direct Admission College in India & Abroad</title>
+    <title>UniDirect - Find Your Direct Admission College</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
     <style>
         body {
             font-family: 'Inter', sans-serif;
-            scroll-behavior: smooth; /* Adds smooth scrolling */
+            scroll-behavior: smooth;
         }
-        .hero-bg {
-            background-color: #f8fafc;
-        }
+        .hero-bg { background-color: #f8fafc; }
         .international-bg {
-            background-color: #1e3a8a; /* A deep blue for contrast */
+            background-color: #1e3a8a;
             background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
         }
         input[type=range]::-webkit-slider-thumb {
-            -webkit-appearance: none;
-            appearance: none;
-            width: 24px;
-            height: 24px;
-            background: #2563eb;
-            cursor: pointer;
-            border-radius: 50%;
-            margin-top: -8px;
-        }
-        input[type=range]::-moz-range-thumb {
-            width: 24px;
-            height: 24px;
-            background: #2563eb;
-            cursor: pointer;
-            border-radius: 50%;
+            -webkit-appearance: none; appearance: none; width: 24px; height: 24px;
+            background: #2563eb; cursor: pointer; border-radius: 50%; margin-top: -8px;
         }
     </style>
 </head>
@@ -44,49 +30,35 @@
     <!-- Header -->
     <header class="bg-white shadow-sm sticky top-0 z-50">
         <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="#" class="flex items-center space-x-3">
-                <!-- SVG Logo Icon -->
-                <svg class="h-8 w-8 text-blue-600" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M12 2.25L2 7.5L12 12.75L22 7.5L12 2.25Z"/>
-                    <path d="M2 16.5L12 21.75L22 16.5V11.25L12 16.5L2 11.25V16.5Z" fill-opacity="0.5"/>
-                    <path d="M20 12.375V8.25L12 12.75L4 8.25V12.375L12 17.25L20 12.375Z" />
-                </svg>
+            <a href="/" class="flex items-center space-x-3">
+                <svg class="h-8 w-8 text-blue-600" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M12 2.25L2 7.5L12 12.75L22 7.5L12 2.25Z"/><path d="M2 16.5L12 21.75L22 16.5V11.25L12 16.5L2 11.25V16.5Z" fill-opacity="0.5"/><path d="M20 12.375V8.25L12 12.75L4 8.25V12.375L12 17.25L20 12.375Z" /></svg>
                 <span class="text-2xl font-bold text-blue-600">UniDirect</span>
             </a>
             <nav class="hidden md:flex items-center space-x-8">
                 <a href="#how-it-works" class="text-gray-600 hover:text-blue-600 transition">How It Works</a>
                 <a href="#international" class="text-gray-600 hover:text-blue-600 transition font-semibold">International</a>
                 <a href="#features" class="text-gray-600 hover:text-blue-600 transition">Why Us</a>
-                <a href="#contact" class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition">Contact</a>
+                <div id="auth-buttons" class="flex items-center space-x-4"></div>
             </nav>
-            <button class="md:hidden text-gray-600">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
-                </svg>
-            </button>
+            <button class="md:hidden text-gray-600"><i data-lucide="menu" class="w-6 h-6"></i></button>
         </div>
     </header>
 
-    <!-- Hero Section -->
+    <!-- Main Content -->
     <main class="hero-bg">
         <div class="container mx-auto px-6 py-20 md:py-28 text-center">
-            <h1 class="text-4xl md:text-6xl font-extrabold text-gray-900 leading-tight">
-                Find Your Dream College After 12th.
+            <h1 class="text-4xl md:text-5xl font-extrabold text-gray-900 leading-tight">
+                Start Your Journey to the Perfect College – Search Now!
             </h1>
-            <p class="mt-6 text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
-                Select your stream, budget, and location to discover colleges across India offering direct admission.
+            <p class="mt-6 text-lg text-gray-600 max-w-3xl mx-auto">
+                Select your stream, budget, and location to discover colleges across India.
             </p>
-            
-            <!-- Search Form -->
             <div class="mt-12 max-w-4xl mx-auto bg-white p-6 md:p-8 rounded-2xl shadow-xl">
                 <form id="college-search-form" class="grid grid-cols-1 md:grid-cols-5 gap-4 items-end">
                     <div class="text-left md:col-span-1">
                         <label for="stream" class="block text-sm font-medium text-gray-700 mb-2">Stream</label>
                         <select id="stream" name="stream" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition">
-                            <option>Science</option>
-                            <option>Commerce</option>
-                            <option>Arts</option>
-                            <option>Vocational</option>
+                            <option>Science</option> <option>Commerce</option> <option>Arts</option> <option>Vocational</option>
                         </select>
                     </div>
                     <div class="md:col-span-2 text-left">
@@ -95,9 +67,7 @@
                            <input id="budget" name="budget" type="range" min="25000" max="1000000" step="5000" value="150000" class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer">
                         </div>
                          <div class="flex justify-between text-xs text-gray-500 mt-1">
-                            <span>₹25k</span>
-                            <span id="budget-value" class="font-semibold text-blue-600 text-sm">₹1,50,000</span>
-                            <span>₹10L+</span>
+                            <span>₹25k</span><span id="budget-value" class="font-semibold text-blue-600 text-sm">₹1,50,000</span><span>₹10L+</span>
                         </div>
                     </div>
                     <div class="text-left md:col-span-1">
@@ -122,58 +92,20 @@
                 <p class="mt-4 text-lg text-gray-600">Your clear path from search to admission.</p>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
-                <!-- Step 1 -->
-                <div class="text-center p-6">
-                    <div class="flex items-center justify-center h-20 w-20 mx-auto bg-blue-100 text-blue-600 rounded-full mb-6">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" /></svg>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-2">1. Search & Filter</h3>
-                    <p class="text-gray-600">Enter your stream, budget, and preferred location to find matching colleges instantly.</p>
-                </div>
-                <!-- Step 2 -->
-                <div class="text-center p-6">
-                    <div class="flex items-center justify-center h-20 w-20 mx-auto bg-blue-100 text-blue-600 rounded-full mb-6">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" /></svg>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-2">2. Explore Colleges</h3>
-                    <p class="text-gray-600">Get a curated list of colleges with details on courses, fees, and placement support.</p>
-                </div>
-                <!-- Step 3 -->
-                <div class="text-center p-6">
-                    <div class="flex items-center justify-center h-20 w-20 mx-auto bg-blue-100 text-blue-600 rounded-full mb-6">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-2">3. Get Free Guidance</h3>
-                    <p class="text-gray-600">Our experts help you with the application process, often for free, ensuring a smooth admission.</p>
-                </div>
+                <div class="text-center p-6"><div class="flex items-center justify-center h-20 w-20 mx-auto bg-blue-100 text-blue-600 rounded-full mb-6"><i data-lucide="search" class="w-10 h-10"></i></div><h3 class="text-xl font-semibold mb-2">1. Search & Filter</h3><p class="text-gray-600">Enter your stream, budget, and preferred location to find matching colleges instantly.</p></div>
+                <div class="text-center p-6"><div class="flex items-center justify-center h-20 w-20 mx-auto bg-blue-100 text-blue-600 rounded-full mb-6"><i data-lucide="mouse-pointer-square" class="w-10 h-10"></i></div><h3 class="text-xl font-semibold mb-2">2. Explore Colleges</h3><p class="text-gray-600">Get a curated list of colleges with details on courses, fees, and placement support.</p></div>
+                <div class="text-center p-6"><div class="flex items-center justify-center h-20 w-20 mx-auto bg-blue-100 text-blue-600 rounded-full mb-6"><i data-lucide="check-circle-2" class="w-10 h-10"></i></div><h3 class="text-xl font-semibold mb-2">3. Get Free Guidance</h3><p class="text-gray-600">Our experts help you with the application process, often for free, ensuring a smooth admission.</p></div>
             </div>
         </div>
     </section>
-    
+
     <!-- International Admissions Section -->
     <section id="international" class="py-20 international-bg">
         <div class="container mx-auto px-6 text-center">
             <h2 class="text-3xl md:text-4xl font-bold text-white">Explore International Admissions</h2>
             <p class="mt-4 text-lg text-blue-200 max-w-2xl mx-auto">Study abroad with direct admission based on your Class 12th performance.</p>
-            
             <div class="mt-12 max-w-lg mx-auto bg-white rounded-2xl shadow-2xl overflow-hidden transform hover:scale-105 transition-transform duration-300">
-                <div class="p-8">
-                    <img src="https://upload.wikimedia.org/wikipedia/en/thumb/3/35/Vilnius_Tech_logo.svg/1200px-Vilnius_Tech_logo.svg.png" 
-                         onerror="this.onerror=null;this.src='https://placehold.co/300x80/1e3a8a/ffffff?text=VILNIUS+TECH';"
-                         alt="Vilnius Tech University Logo" class="h-12 mx-auto mb-6">
-                    <h3 class="text-2xl font-bold text-gray-900">Vilnius Tech University</h3>
-                    <p class="text-gray-600 mt-1">Lithuania, Europe</p>
-                    
-                    <div class="mt-6 text-left space-y-3">
-                        <p class="flex items-center"><svg class="h-5 w-5 text-green-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>Direct Admission on Class 12th Marks</p>
-                        <p class="flex items-center"><svg class="h-5 w-5 text-green-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>Globally Recognized Technical University</p>
-                        <p class="flex items-center"><svg class="h-5 w-5 text-green-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>Affordable European education</p>
-                    </div>
-                    
-                    <button class="mt-8 w-full bg-yellow-500 text-blue-900 font-bold py-3 px-6 rounded-lg shadow-md hover:bg-yellow-400 transition-all">
-                        Learn More & Apply
-                    </button>
-                </div>
+                <div class="p-8"><img src="https://upload.wikimedia.org/wikipedia/en/thumb/3/35/Vilnius_Tech_logo.svg/1200px-Vilnius_Tech_logo.svg.png" onerror="this.onerror=null;this.src='https://placehold.co/300x80/1e3a8a/ffffff?text=VILNIUS+TECH';" alt="Vilnius Tech University Logo" class="h-12 mx-auto mb-6"><h3 class="text-2xl font-bold text-gray-900">Vilnius Tech University</h3><p class="text-gray-600 mt-1">Lithuania, Europe</p><div class="mt-6 text-left space-y-3"><p class="flex items-center"><i data-lucide="check-circle" class="h-5 w-5 text-green-500 mr-2"></i>Direct Admission on Class 12th Marks</p><p class="flex items-center"><i data-lucide="check-circle" class="h-5 w-5 text-green-500 mr-2"></i>Globally Recognized Technical University</p><p class="flex items-center"><i data-lucide="check-circle" class="h-5 w-5 text-green-500 mr-2"></i>Affordable European education</p></div><button class="mt-8 w-full bg-yellow-500 text-blue-900 font-bold py-3 px-6 rounded-lg shadow-md hover:bg-yellow-400 transition-all">Learn More & Apply</button></div>
             </div>
              <a href="#" class="mt-8 inline-block text-blue-200 hover:text-white transition">View all international options &rarr;</a>
         </div>
@@ -182,109 +114,156 @@
     <!-- Features Section (Why Us) -->
     <section id="features" class="py-20 bg-gray-50">
         <div class="container mx-auto px-6">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl md:text-4xl font-bold text-gray-900">Why Choose UniDirect?</h2>
-                <p class="mt-4 text-lg text-gray-600">The smartest way to find your future college.</p>
-            </div>
+            <div class="text-center mb-12"><h2 class="text-3xl md:text-4xl font-bold text-gray-900">Why Choose UniDirect?</h2><p class="mt-4 text-lg text-gray-600">The smartest way to find your future college.</p></div>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <div class="bg-white p-8 rounded-xl shadow-md hover:shadow-xl transition-shadow">
-                    <h3 class="text-lg font-bold mb-2 text-blue-600">Budget-First Search</h3>
-                    <p>Find high-quality colleges you can actually afford without financial stress.</p>
+                <div class="bg-white p-8 rounded-xl shadow-md hover:shadow-xl transition-shadow"><h3 class="text-lg font-bold mb-2 text-blue-600">Budget-First Search</h3><p>Find high-quality colleges you can actually afford without financial stress.</p></div>
+                <div class="bg-white p-8 rounded-xl shadow-md hover:shadow-xl transition-shadow"><h3 class="text-lg font-bold mb-2 text-blue-600">All Streams Covered</h3><p>Whether from Science, Commerce, Arts, or Vocational, we have options for you.</p></div>
+                <div class="bg-white p-8 rounded-xl shadow-md hover:shadow-xl transition-shadow"><h3 class="text-lg font-bold mb-2 text-blue-600">Zero/Low Cost Support</h3><p>Our guidance is free for partnered colleges and low-cost for others. No hidden fees.</p></div>
+                <div class="bg-white p-8 rounded-xl shadow-md hover:shadow-xl transition-shadow"><h3 class="text-lg font-bold mb-2 text-blue-600">Verified Institutions</h3><p>We only list verified and reputable institutions to ensure you get a quality education.</p></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900">What Our Students Say</h2>
+                <p class="mt-4 text-lg text-gray-600">Thousands of students found their perfect college with us.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-gray-50 p-8 rounded-xl shadow-sm">
+                    <p class="text-gray-700 italic">"UniDirect made the impossible possible. I found a great engineering college within my budget, something I struggled with for months. The process was so simple!"</p>
+                    <div class="mt-4 flex items-center">
+                        <img class="w-12 h-12 rounded-full object-cover" src="https://placehold.co/100x100/e2e8f0/4a5568?text=AK" alt="Avatar">
+                        <div class="ml-4">
+                            <p class="font-semibold text-gray-900">Anjali Kumari</p>
+                            <p class="text-sm text-gray-500">B.Tech Student, Patna</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="bg-white p-8 rounded-xl shadow-md hover:shadow-xl transition-shadow">
-                    <h3 class="text-lg font-bold mb-2 text-blue-600">All Streams Covered</h3>
-                    <p>Whether from Science, Commerce, Arts, or Vocational, we have options for you.</p>
+                <div class="bg-gray-50 p-8 rounded-xl shadow-sm">
+                    <p class="text-gray-700 italic">"As a commerce student, I was overwhelmed with options. The guidance from the UniDirect team was free and incredibly helpful. Highly recommended!"</p>
+                    <div class="mt-4 flex items-center">
+                        <img class="w-12 h-12 rounded-full object-cover" src="https://placehold.co/100x100/dbeafe/1e3a8a?text=RS" alt="Avatar">
+                        <div class="ml-4">
+                            <p class="font-semibold text-gray-900">Rohan Sharma</p>
+                            <p class="text-sm text-gray-500">BBA Student, Delhi</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="bg-white p-8 rounded-xl shadow-md hover:shadow-xl transition-shadow">
-                    <h3 class="text-lg font-bold mb-2 text-blue-600">Zero/Low Cost Support</h3>
-                    <p>Our guidance is free for partnered colleges and low-cost for others. No hidden fees.</p>
-                </div>
-                <div class="bg-white p-8 rounded-xl shadow-md hover:shadow-xl transition-shadow">
-                    <h3 class="text-lg font-bold mb-2 text-blue-600">Verified Institutions</h3>
-                    <p>We only list verified and reputable institutions to ensure you get a quality education.</p>
+                <div class="bg-gray-50 p-8 rounded-xl shadow-sm">
+                    <p class="text-gray-700 italic">"I never thought I could study abroad until I found the international section on UniDirect. They connected me with Vilnius Tech and guided me through the whole process."</p>
+                    <div class="mt-4 flex items-center">
+                        <img class="w-12 h-12 rounded-full object-cover" src="https://placehold.co/100x100/fce7f3/831843?text=P S" alt="Avatar">
+                        <div class="ml-4">
+                            <p class="font-semibold text-gray-900">Priya Singh</p>
+                            <p class="text-sm text-gray-500">Applicant, Vilnius Tech</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- AdSense Placeholder -->
-    <section class="py-10 bg-gray-100">
-        <div class="container mx-auto px-6">
-            <div class="bg-gray-200 h-24 flex items-center justify-center rounded-lg">
-                <p class="text-gray-500">Advertisement Area</p>
-            </div>
+    <!-- Final CTA Section -->
+    <section class="bg-blue-600">
+        <div class="container mx-auto px-6 py-16 text-center">
+            <h2 class="text-3xl font-bold text-white">Ready to Find Your College?</h2>
+            <p class="mt-2 text-blue-200 max-w-xl mx-auto">Create a free account to save your searches, track applications, and get personalized support from our experts.</p>
+            <a href="/login.html" class="mt-8 inline-block bg-white text-blue-600 font-bold py-3 px-8 rounded-lg shadow-lg hover:bg-gray-100 transition-transform transform hover:scale-105">
+                Get Started for Free
+            </a>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer id="contact" class="bg-gray-900 text-white">
+    <footer id="contact" class="bg-gray-800 text-white">
         <div class="container mx-auto px-6 py-12">
             <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
-                <div>
-                    <h3 class="text-xl font-bold mb-4">UniDirect</h3>
-                    <p class="text-gray-400">Your direct path to higher education.</p>
-                </div>
-                <div>
-                    <h4 class="font-semibold mb-4">Quick Links</h4>
-                    <ul class="space-y-2">
-                        <li><a href="#" class="text-gray-400 hover:text-white">Home</a></li>
-                        <li><a href="#how-it-works" class="text-gray-400 hover:text-white">How It Works</a></li>
-                        <li><a href="#international" class="text-gray-400 hover:text-white">International</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white">For Colleges</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 class="font-semibold mb-4">Legal</h4>
-                    <ul class="space-y-2">
-                        <li><a href="#" class="text-gray-400 hover:text-white">Privacy Policy</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white">Terms of Service</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 class="font-semibold mb-4">Contact</h4>
-                    <p class="text-gray-400">help@unidirect.in</p>
-                </div>
+                <div><h3 class="text-xl font-bold mb-4">UniDirect</h3><p class="text-gray-400">Your direct path to higher education.</p></div>
+                <div><h4 class="font-semibold mb-4">Quick Links</h4><ul class="space-y-2"><li><a href="#" class="text-gray-400 hover:text-white">Home</a></li><li><a href="#how-it-works" class="text-gray-400 hover:text-white">How It Works</a></li><li><a href="#international" class="text-gray-400 hover:text-white">International</a></li><li><a href="#" class="text-gray-400 hover:text-white">For Colleges</a></li></ul></div>
+                <div><h4 class="font-semibold mb-4">Legal</h4><ul class="space-y-2"><li><a href="#" class="text-gray-400 hover:text-white">Privacy Policy</a></li><li><a href="#" class="text-gray-400 hover:text-white">Terms of Service</a></li></ul></div>
+                <div><h4 class="font-semibold mb-4">Contact</h4><p class="text-gray-400">help@unidirect.in</p></div>
             </div>
-            <div class="mt-8 border-t border-gray-700 pt-6 text-center text-gray-500">
-                <p>&copy; 2024 UniDirect. All rights reserved.</p>
-            </div>
+            <div class="mt-8 border-t border-gray-700 pt-6 text-center text-gray-500"><p>&copy; 2024 UniDirect. All rights reserved.</p></div>
         </div>
     </footer>
 
-    <script>
-        // Script to update the budget value display as the slider moves
+    <script type="module">
+        // --- Firebase Configuration ---
+        const firebaseConfig = {
+            apiKey: "YOUR_API_KEY",
+            authDomain: "unidirect-f4687.firebaseapp.com",
+            projectId: "unidirect-f4687",
+            storageBucket: "unidirect-f4687.appspot.com",
+            messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
+            appId: "YOUR_APP_ID"
+        };
+
+        // --- Firebase Imports ---
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-app.js";
+        import { getAuth, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-auth.js";
+
+        // --- Firebase Initialization ---
+        const app = initializeApp(firebaseConfig);
+        const auth = getAuth(app);
+        
+        // --- DOM Elements ---
+        const searchForm = document.getElementById('college-search-form');
+        const authButtonsContainer = document.getElementById('auth-buttons');
         const budgetSlider = document.getElementById('budget');
         const budgetValue = document.getElementById('budget-value');
+        
+        // --- Functions ---
+        function updateHeader(user) {
+            authButtonsContainer.innerHTML = ''; 
+            if (user) {
+                const dashboardButton = document.createElement('a');
+                dashboardButton.href = '/dashboard.html';
+                dashboardButton.className = 'bg-gray-100 text-gray-800 px-4 py-2 rounded-lg hover:bg-gray-200 transition font-semibold';
+                dashboardButton.textContent = 'Dashboard';
 
-        budgetSlider.addEventListener('input', (event) => {
-            const value = parseInt(event.target.value);
-            const formattedValue = new Intl.NumberFormat('en-IN', {
-                style: 'currency',
-                currency: 'INR',
-                minimumFractionDigits: 0,
-                maximumFractionDigits: 0,
-            }).format(value);
-            budgetValue.textContent = formattedValue;
+                const logoutButton = document.createElement('button');
+                logoutButton.className = 'bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition';
+                logoutButton.textContent = 'Logout';
+                logoutButton.onclick = () => signOut(auth);
+
+                authButtonsContainer.append(dashboardButton, logoutButton);
+            } else {
+                const loginButton = document.createElement('a');
+                loginButton.href = '/login.html';
+                loginButton.className = 'bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition';
+                loginButton.textContent = 'Login / Signup';
+                authButtonsContainer.appendChild(loginButton);
+            }
+        }
+
+        // --- Event Listeners ---
+        searchForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const searchCriteria = {
+                stream: document.getElementById('stream').value,
+                budget: document.getElementById('budget').value,
+                location: document.getElementById('location').value
+            };
+            localStorage.setItem('searchQuery', JSON.stringify(searchCriteria));
+            
+            // FIX: Use the full URL for redirection to prevent errors.
+            window.location.href = 'https://unidirect-f4687.web.app/collegesearch.html';
         });
 
-        // Trigger the input event once on load to set the initial value
+        budgetSlider.addEventListener('input', (e) => { 
+            budgetValue.textContent = new Intl.NumberFormat('en-IN', { style: 'currency', currency: 'INR', minimumFractionDigits: 0 }).format(e.target.value); 
+        });
         budgetSlider.dispatchEvent(new Event('input'));
-
-        // Handle form submission
-        const form = document.getElementById('college-search-form');
-        form.addEventListener('submit', (event) => {
-            event.preventDefault(); // Prevents the page from reloading
-            const stream = document.getElementById('stream').value;
-            const budget = document.getElementById('budget').value;
-            const location = document.getElementById('location').value;
-            
-            console.log('Searching for colleges with:', { stream, budget, location });
-            
-            // This is a placeholder alert. In the real app, this will redirect to the results page.
-            alert(`Searching for ${stream} colleges in ${location || 'any location'} with a budget up to ₹${parseInt(budget).toLocaleString('en-in')}`);
+        
+        onAuthStateChanged(auth, (user) => {
+            updateHeader(user);
         });
 
+        // Initialize Lucide Icons
+        lucide.createIcons();
     </script>
-
 </body>
 </html>
